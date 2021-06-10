@@ -2,9 +2,6 @@
 AINUC说明
 
 
-
-
-
 ## Python测试运行
 ```bash
 pip install openvino
@@ -28,6 +25,33 @@ cd 'C:\Program Files (x86)\IntelSWTools\openvino\bin\'
 ```
 
 
-refernce:
+## 案例：
+https://github.com/radiumray/AINUC-gettingStart/blob/main/faceDeteClass.py
+
+
+## 模型转换：
+
+/opt/intel/openvino/deployment_tools/model_optimizer/install_prerequisites$ sudo ./install_prerequisites.sh
+
++ onnx---->xml
+python /opt/intel/openvino_2020.1.023/deployment_tools/model_optimizer/mo.py --input_model singleHumanPose.onnx --input_shape [1,3,384,288] --input "input" --output "output"
+
+
++ caffe----->xml
+python /opt/intel/openvino_2020.1.023/deployment_tools/model_optimizer/mo.py  --input_model MobileNetSSD_deploy.caffemodel --scale 127.5
+
+
++ pb----->xml
+python /opt/intel/openvino_2020.1.023/deployment_tools/model_optimizer/mo.py  --input_model mask_recognize.h5.pb --input_shape=[1,160,160,3]
+
+
+
+
++ 将PyTorch模型转换为ONNX格式，使用下载的仓库中的convert_to_onnx.py脚本，进行模型格式转换：
+python scripts/convert_to_onnx.py --checkpoint-path <CHECKPOINT>. It produces human-pose-estimation.onnx
+
+
+
+## refernce:
 
 https://www.cnblogs.com/ag-chen/articles/13577020.html
