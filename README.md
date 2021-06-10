@@ -6,6 +6,9 @@ AINUC说明
 
 
 ## Python测试运行
+```bash
+pip install openvino
+```
 ```py
 from openvino.inference_engine import IENetwork
 ```
