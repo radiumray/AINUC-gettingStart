@@ -35,6 +35,7 @@ https://github.com/radiumray/AINUC-gettingStart/blob/main/yolov5Openvino.pdf
 
 ## 模型转换：
 
++ Netron 模型查看
 + /opt/intel/openvino/deployment_tools/model_optimizer/install_prerequisites$ sudo ./install_prerequisites.sh
 
 + onnx---->xml
