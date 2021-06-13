@@ -26,8 +26,11 @@ cd 'C:\Program Files (x86)\IntelSWTools\openvino\bin\'
 ```
 
 
-## 案例：
+## 简单案例：
 https://github.com/radiumray/AINUC-gettingStart/blob/main/faceDeteClass.py
+
+## yolo相关案例：
+https://github.com/radiumray/AINUC-gettingStart/blob/main/yolov5Openvino.pdf
 
 
 ## 模型转换：
